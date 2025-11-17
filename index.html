@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mau Jadi Pacarku?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor-effect"></div>
+    
+    <div class="container" id="main-page">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <h1 class="question">Kamu mau gak jadi pacar aku???</h1>
+        
+        <div class="buttons-container">
+            <button id="no-btn" class="btn btn-no">Ga Mau</button>
+            <button id="yes-btn" class="btn btn-yes">Iya Aku Mau</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="form-page">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <h2 class="form-title">Yay! Aku senang banget! 💖</h2>
+        <p class="form-subtitle">Isi form ini ya untuk rencana kencan kita</p>
+        
+        <form id="date-form">
+            <div class="form-group">
+                <label for="date">Mau ngedate kapan?</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Di mana?</label>
+                <div class="location-options">
+                    <input type="radio" id="cafe" name="location" value="Cafe" required>
+                    <label for="cafe">
+                        <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=300" alt="Cafe">
+                        Cafe
+                    </label>
+                    <input type="radio" id="bioskop" name="location" value="Bioskop">
+                    <label for="bioskop">
+                        <img src="https://statik.tempo.co/data/2020/07/08/id_951140/951140_720.jpg" alt="Bioskop">
+                        Bioskop
+                    </label>
+                    <input type="radio" id="hotel" name="location" value="Hotel">
+                    <label for="hotel">
+                        <img src="https://www.kayak.co.id/rimg/himg/2e/7b/a5/expedia_group-94818-faad0b-358361.jpg?width=1366&height=768&crop=true" alt="Hotel">
+                        Hotel
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="photo">Pap duluu (upload foto kamu)</label>
+                <input type="file" id="photo" accept="image/*" required>
+            </div>
+            
+            <button type="submit" class="btn btn-submit">Buat Rencana Kencan</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="result-page">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <h2 class="result-title">Rencana Kencan Kita! 💕</h2>
+
+        <div class="date-card">
+            <h3>Kencan Spesial Kita</h3>
+
+            <div class="date-info">
+                <p><strong>📅 Tanggal:</strong> <span id="result-date"></span></p>
+                <p><strong>📍 Tempat:</strong> <span id="result-location"></span></p>
+            </div>
+
+            <div class="photo-preview">
+                <img id="result-photo" src="" alt="Foto kamu yang cantik">
+            </div>
+
+            <p class="simple-message">Aku tunggu ya di tanggal tersebut! 💖</p>
+
+            <button id="restart-btn" class="btn btn-romantic">Buat Rencana Lain</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
